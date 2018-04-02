@@ -11,20 +11,11 @@ h3 {
 	color: #0071bc;
 }
 
-header {
-	background-color: #0071bc;
-}
-
 footer {
 	background-color: #0071bc;
 	color: #ffffff;
 }
 
-#logo {
+nav-link {
 	color: #ffffff;
 }
-
-#nav {
-	color: #ffffff;
-}
-
