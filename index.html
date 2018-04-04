@@ -27,7 +27,7 @@
 
 	<nav class="navbar navbar-light" style="background-color: #0071bc;">
 		  <a class="navbar-brand" href="#">
-		    <img src="images/logo.svg" height="auto" width="100%" alt="">
+		    <img id="logo" src="images/logo.svg" height="auto" width="100%" alt="">
 		  </a>
 
 
@@ -37,7 +37,7 @@
 	        <a class="nav-link" href="#">Location</a>
 	      </li>
 	      <li class="nav-item">
-	        <a class="nav-link" href="#">Contact</a>
+	        <a class="nav-link" href="#">Contact Us</a>
 	      </li>
 	    </ul>
 
@@ -45,10 +45,14 @@
 
 	<div class="container">
 
-		<div class="row">
-			<div class="col-sm">
-				<h1>Drumcondra Business Centre</h1>
-			</div>
+		<div class="jumbotron">
+		  <h1>Drumcondra Business Centre</h1>
+		  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+		  <hr class="my-4">
+		  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+		  <p class="lead">
+		    <a class="btn btn-info btn-lg" href="#" role="button">Enquire Now</a>
+		  </p>
 		</div>
 
 		<div class="row">
@@ -60,28 +64,50 @@
 				<h2>HEADING 2</h2>
 			</div>
 			<div class="col-sm"></div>
-		</div>
-
-		<div class="row">
-			<div class="col-sm">
-				<button type="button" class="btn btn-info">Enquire Now</button>
-			</div>
-			
 		</div>
 
 		<div class="row">
 			<div class="col-sm">
 				<h3>WHERE TO FIND US?</h3>
 			</div>
-			
 		</div>
 
+		<h3>GET IN TOUCH</h3>
 		<div class="row">
-			<div class="col-sm">
-				<h3>GET IN TOUCH</h3>
-				<button type="button" class="btn btn-info">Submit</button>
+			<div class="col-sm-9">
+				
+				<form action="/action_page.php">
+			    <label for="fname">First Name</label>
+			    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+			    <label for="lname">Last Name</label>
+			    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+			    <label for="lname">Last Name</label>
+			    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+			    <label for="lname">Last Name</label>
+			    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+			    <label for="lname">Last Name</label>
+			    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+			    <label for="lname">Last Name</label>
+			    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+			    <label for="country">Country</label>
+			    <select id="country" name="country">
+			      <option value="australia">Australia</option>
+			      <option value="canada">Canada</option>
+			      <option value="usa">USA</option>
+			    </select>
+			  
+			    <input type="submit" value="Submit">
+			  </form>
+				
 			</div>
 		</div>
+		
 
 		
 	</div>
