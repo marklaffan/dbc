@@ -8,11 +8,12 @@ p {
 }
 
 h2 {
-
+	font-size: 28px;
+	font-weight: bold;
 }
 
 h3 {
-	font-size: 33px;
+	font-size: 34px;
 	color: #0071bc;
 	text-align: center;
 }
@@ -24,8 +25,7 @@ h3 {
 }
 
 .interior-imgs {
-	width: 90%;
-}
+	width: 90%;}
 
 /* MESSING WITH BOOTSTRAP CODE */
 
@@ -37,19 +37,33 @@ h3 {
 
 /* FORM */
 
-input[type=text], select {
+#form {
+  width: 50%; 
+  margin: 0 auto;
+  color: #808080;
+	font-family: 'Open Sans', sans-serif;
+}
+
+label {
+  font-size: 22px;
+	font-weight: bold;
+}
+
+
+input[type=text] {
     width: 100%;
     padding: 12px 20px;
-    margin: 8px 0;
+    margin: 0px 0px 16px 0px;
     display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    background-color: #e6e6e6;
+    border: 1px solid #b3b3b3;
+    border-radius: 1px;
     box-sizing: border-box;
 }
 
 input[type=submit] {
-    width: 100%;
-    background-color: #4CAF50;
+    width: 150px;
+    background-color: #29abe2;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -57,7 +71,6 @@ input[type=submit] {
     border-radius: 4px;
     cursor: pointer;
 }
-
 
 /***********/
 /* LAYOUT  */
@@ -132,8 +145,8 @@ input[type=submit] {
 .contact {
   margin: 0 auto;
   height: 100%;
-  width: 60%;
-  background-color: purple;
+  width: 80%;
+/*  background-color: purple;*/
 }
 
 /* FOOTER */
