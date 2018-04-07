@@ -3,19 +3,28 @@ body {
 	font-family: 'Open Sans', sans-serif;
 }
 
+p {
+	font-size: 22px;
+}
+
 h2 {
 
 }
 
 h3 {
+	font-size: 33px;
 	color: #0071bc;
 	text-align: center;
 }
 
 
-/* IDs */
+/* IDs & Classes */
 #logo {
 	padding: 5px;
+}
+
+.interior-imgs {
+	width: 90%;
 }
 
 /* MESSING WITH BOOTSTRAP CODE */
@@ -58,7 +67,7 @@ input[type=submit] {
 .header {
   height: 100%;
   width: 100%;
-  background-color: blue;
+  /*background-color: blue;*/
 }
 
 /* JUMBO */
@@ -66,15 +75,13 @@ input[type=submit] {
   margin: 0 auto;
   height: 100%;
   width: 80%;
-  background-color: yellow;
+  /*background-color: yellow;*/
 }
 
 /* CONTENT */
 .content {
   margin: 0 auto;
-
   width: 80%;
-  background-color: red;
 }
 
 .content-left {
@@ -82,7 +89,6 @@ input[type=submit] {
   margin: 0 auto;
   height: 100%;
   width: 50%;
-  background-color: red;
 }
 
 .content-right {
@@ -90,7 +96,6 @@ input[type=submit] {
   margin: 0 auto;
   height: 100%;
   width: 50%;
-  background-color: pink;
 }
 
 .content-text {
@@ -98,30 +103,29 @@ input[type=submit] {
   margin: 0 auto;
   height: 100%;
   width: 50%;
-  background-color: grey;
 }
 
 .content-img {
   float: right;
   margin: 0 auto;
+  padding: 0;
   height: 100%;
   width: 50%;
-  background-color: pink;
 }
 
 .content-button {
   margin: 0 auto;
   height: 100%;
   width: 150px;
-  background-color: lightblue;
+/*  background-color: lightblue;*/
 }
 
 /* LOCATION */
 .location {
   margin: 0 auto;
   height: 100%;
-  width: 60%;
-  background-color: green;
+  width: 60%;/*
+  background-color: green;*/
 }
 
 /* CONTACT */
@@ -171,6 +175,10 @@ input[type=submit] {
 }
 
 @media only screen and (max-width: 485px) {
+	p {
+		font-size: 12px;
+	}
+
   .header-jumbo {
     display: -webkit-box;
     display: -moz-box;
