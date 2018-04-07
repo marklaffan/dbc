@@ -159,7 +159,7 @@ textarea {
 
 /* LOCATION */
 .location {
-  margin: 10px auto;
+  margin: 50px auto;
   height: 100%;
   width: 60%;/*
   background-color: green;*/
@@ -167,20 +167,44 @@ textarea {
 
 /* CONTACT */
 .contact {
-  margin: 10px auto;
+  margin: 20px auto;
   height: 100%;
   width: 80%;
 /*  background-color: purple;*/
 }
 
 /* FOOTER */
-.footer {
+footer {
   height: 100%;
   width: 100%;
   background-color: #0071bc;
 }
 
+.foot-left {
+	display: inline-block;
+	/*background-color: grey;*/
+	padding: 20px;
+	width: 50%;
+	height: 100%;
+	/*float: left;*/
+	color: #ffffff;
+}
+
+.foot-right {
+	display: inline-block;
+	/*background-color: red;*/
+	padding: 20px;
+	height: 100%;
+	width: 50%;
+	float: right;
+	text-align: right;
+}
+
 @media only screen and (max-width: 600px) {
+
+	p {
+		font-size: 16px;
+	}
 
 	/* FORM */
 
