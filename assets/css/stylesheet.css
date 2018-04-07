@@ -157,33 +157,71 @@ input[type=submit] {
 }
 
 @media only screen and (max-width: 600px) {
+
+	/* FORM */
+
+	#form {
+	  width: 75%; 
+	  margin: 0 auto;
+	  color: #808080;
+	font-family: 'Open Sans', sans-serif;
+	}
+
+	label {
+	  font-size: 18px;
+		font-weight: bold;
+	}
+
+
+	input[type=text] {
+	    width: 100%;
+	    padding: 8px 18px;
+	    margin: 0px 0px 16px 0px;
+	    display: inline-block;
+	    background-color: #e6e6e6;
+	    border: 1px solid #b3b3b3;
+	    border-radius: 1px;
+	    box-sizing: border-box;
+	}
+
+	input[type=submit] {
+	    width: 150px;
+	    background-color: #29abe2;
+	    color: white;
+	    padding: 14px 20px;
+	    margin: 8px 0;
+	    border: none;
+	    border-radius: 4px;
+	    cursor: pointer;
+	}
+
   .content-left {
     margin: 0 auto;
-    height: 100px;
-    width: 100%;
-    background-color: red;
+    height: 100%;
+    width: 50%;
+    /*background-color: red;*/
   }
 
   .content-right {
     margin: 0 auto;
-    height: 100px;
-    width: 100%;
-    background-color: pink;
+    height: 100%;
+    width: 50%;
+    /*background-color: pink;*/
   }
   .content-text {
     float: left;
     margin: 0 auto;
-    height: 100px;
-    width: 100%;
-    background-color: grey;
+    height: 100%;
+    width: 90%;
+    /*background-color: grey;*/
   }
 
   .content-img {
     float: right;
     margin: 0 auto;
-    height: 100px;
+    height: 100%;
     width: 100%;
-    background-color: pink;
+    /*background-color: pink;*/
   }
 }
 
@@ -191,6 +229,10 @@ input[type=submit] {
 	p {
 		font-size: 12px;
 	}
+
+/********************************************/
+/* MAKING HEADER AND JUMBO SWITCH POSITIONS */
+/********************************************/
 
   .header-jumbo {
     display: -webkit-box;
@@ -226,57 +268,107 @@ input[type=submit] {
     -webkit-order: 1;
     order: 1;
   }
+
+/********************************************/
+/* MAKING HEADER AND JUMBO SWITCH POSITIONS */
+/********************************************/
   
-  .header {
-    height: 100px;
-    width: 100%;
-    background-color: blue;
-  }
+  /* FORM */
 
-  /* JUMBO */
-  .jumbo {
-    margin: 0 auto;
-    height: 100px;
-    width: 100%;
-    background-color: yellow;
-  }
+	#form {
+	  width: 90%; 
+	  margin: 0 auto;
+	  color: #808080;
+		font-family: 'Open Sans', sans-serif;
+	}
 
-  /* CONTENT */
-  .content {
-    margin: 0 auto;
-    height: 100px;
-    width: 85%;
-    background-color: red;
-  }
+	label {
+	  font-size: 16px;
+		font-weight: bold;
+	}
 
-  .content-button {
-    margin: 0 auto;
-    height: 50px;
-    width: 150px;
-    background-color: lightblue;
-  }
 
-  /* LOCATION */
-  .location {
-    margin: 0 auto;
-    height: 100px;
-    width: 70%;
-    background-color: green;
-  }
+	input[type=text] {
+	    width: 100%;
+	    padding: 6px 14px;
+	    margin: 0px 0px 16px 0px;
+	    display: inline-block;
+	    background-color: #e6e6e6;
+	    border: 1px solid #b3b3b3;
+	    border-radius: 1px;
+	    box-sizing: border-box;
+	}
 
-  /* CONTACT */
-  .contact {
-    margin: 0 auto;
-    height: 100px;
-    width: 70%;
-    background-color: purple;
-  }
+	input[type=submit] {
+	    width: 120px;
+	    background-color: #29abe2;
+	    color: white;
+	    padding: 10px 15px;
+	    margin: 8px 0;
+	    border: none;
+	    border-radius: 4px;
+	    cursor: pointer;
+	}
 
-  /* FOOTER */
-  .footer {
-    height: 100px;
-    width: 100%;
-    background-color: orange;
-  }
+
+/* CONTENT */
+.content {
+  margin: 0 auto;
+  width: 90%;
+  height: 100%;
+}
+
+.content-left {
+  float: left;
+  margin: 0 auto;
+  height: 100%;
+  width: 50%;
+}
+
+.content-right {
+  float: right;
+  margin: 0 auto;
+  height: 100%;
+  width: 50%;
+}
+
+.content-text {
+  float: left;
+  margin: 0 auto;
+  height: 100%;
+  width: 90%;
+}
+
+.content-img {
+  float: right;
+  margin: 0 auto;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.content-button {
+  margin: 0 auto;
+  height: 100%;
+  width: 150px;
+/*  background-color: lightblue;*/
+}
+
+/* LOCATION */
+.location {
+  margin: 0 auto;
+  height: 100%;
+  width: 70%;/*
+  background-color: green;*/
+}
+
+/* CONTACT */
+.contact {
+  margin: 0 auto;
+  height: 100%;
+  width: 85%;
+/*  background-color: purple;*/
+}
+
 }
    
