@@ -20,20 +20,31 @@ h3 {
 
 
 /* IDs & Classes */
-#logo {
-	padding: 5px;
-}
 
 .interior-imgs {
 	width: 90%;}
 
-/* MESSING WITH BOOTSTRAP CODE */
+
+/* Nav Bar */
 
 .nav-link {
 	color: #ffffff;
 	font-weight: bold;
 }
 
+.nav-left {
+	width: 75%;
+	float: left;
+}
+
+.nav-right {
+	width: 25%;
+	float: right;
+}
+
+#logo {
+	padding: 5px;
+}
 
 /* FORM */
 
@@ -182,17 +193,14 @@ footer {
 
 .foot-left {
 	display: inline-block;
-	/*background-color: grey;*/
 	padding: 20px;
 	width: 50%;
 	height: 100%;
-	/*float: left;*/
 	color: #ffffff;
 }
 
 .foot-right {
 	display: inline-block;
-	/*background-color: red;*/
 	padding: 20px;
 	height: 100%;
 	width: 50%;
