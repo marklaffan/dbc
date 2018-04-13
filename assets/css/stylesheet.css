@@ -469,10 +469,10 @@ footer {
 	}
 
 	input[type=submit] {
-	    width: 120px;
+	    width: 100px;
 	    background-color: #29abe2;
 	    color: white;
-	    padding: 10px 15px;
+	    padding: 5px 10px;
 	    margin: 8px 0;
 	    border: none;
 	    border-radius: 4px;
