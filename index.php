@@ -1,7 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<!-- Google Analytics -->
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
+	  ga('create', 'UA-51510222-1', 'drumcondrabusinesscentre.com');
+	  ga('send', 'pageview');
+
+	</script>
+	
 	<!-- If you want your bootstrap styled website to be responsive on mobile -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
@@ -168,28 +179,31 @@
 		<p style="text-align: center;">For all enquiries regarding lettings, viewings or availability, fill out the form below.<br>
 		We aim to reply to all emails within 24 hours.
 		</p>
-		<form id="form" action="/action_page.php">
-		  <label for="fname">Name <span style="color: red;">*</span></label>
+		<form name="myForm" id="form" action="index.php" onsubmit="return validateForm()" method="post">
+		  <label for="name">Name <span style="color: red;">*</span></label>
 		  <input type="text" id="fname" name="firstname" placeholder="First Name">
 		  <input type="text" id="lname" name="lastname" placeholder="Last Name">
 		  
-		  <label for="comp">Company</label>
-		  <input type="text" id="comp" name="company">
+		  <label for="company">Company</label>
+		  <input type="text" id="company" name="company">
 
-		  <label for="num">Contact Number <span style="color: red;">*</span></label>
-		  <input type="text" id="num" name="number">
+		  <label for="number">Contact Number <span style="color: red;">*</span></label>
+		  <input type="text" id="number" name="number">
 
 		  <label for="email">Email <span style="color: red;">*</span></label>
 		  <input type="text" id="email" name="email">
 		  
 		  
-		  <label for="msg">Your Message</label>
+		  <label for="comment">Your Message</label>
 		  <textarea>Don't be shy...</textarea>
 
 		  <input type="submit" value="Submit">
 		</form>
 	</div>
 
+	<!-- <p>Welcome <?php echo $_POST["firstname"]; ?><br>
+Your email address is: <?php echo $_POST["email"]; ?></p> -->
+	
 	<footer>
 		<div class="foot-left">
 			<p>Built by Websited</p>
