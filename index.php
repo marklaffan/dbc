@@ -242,40 +242,26 @@ function test_input($data) {
 			<!-- action="#contact" -->
 		  <label for="name">Name <span style="color: red;"></span></label>
 		  <span style="color: red;"><?php echo $firstnameErr;?></span>
-		  <input type="text" id="fname" name="firstname" placeholder="First Name">
-		  <input type="text" id="lname" name="lastname" placeholder="Last Name">
+		  <input type="text" id="fname" name="firstname" placeholder="First Name" value="<?php echo $firstname;?>">
+		  <input type="text" id="lname" name="lastname" placeholder="Last Name" value="<?php echo $lastname;?>">
 
 		  <label for="company">Company</label>
-		  <input type="text" id="company" name="company">
+		  <input type="text" id="company" name="company" value="<?php echo $company;?>">
 
 		  <label for="number">Contact Number <span style="color: red;">*</span></label>
 		  <span style="color: red;"><?php echo $numberErr;?></span>
-		  <input type="text" id="number" name="number">
+		  <input type="text" id="number" name="number" value="<?php echo $number;?>">
 
 		  <label for="email">Email <span style="color: red;">*</span></label>
 		  <span style="color: red;"><?php echo $emailErr;?></span>
-		  <input type="text" id="email" name="email">
+		  <input type="text" id="email" name="email" value="<?php echo $email;?>">
 		  
 		  <label for="comment">Your Message</label>
-		  <textarea name="comment">Don't be shy...</textarea>
+		  <textarea name="comment" placeholder="Don't be shy..."><?php echo $comment;?></textarea>
 
 		  <input type="submit" value="Submit">
 		</form>
 	</div>
-
-	<?php
-	echo $firstname;
-	echo "<br>";
-	echo $lastname;
-	echo "<br>";
-	echo $company;
-	echo "<br>";
-	echo $number;
-	echo "<br>";
-	echo $email;
-	echo "<br>";
-	echo $comment;
-	?>
 	
 	<footer>
 		<div class="foot-left">
