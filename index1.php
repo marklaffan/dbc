@@ -22,62 +22,13 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
 
+
+	<script type="text/javascript" src="assets/js/form_check.js"></script>
 	<link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700,800" rel="stylesheet">
 
 </head>
 <body>
-
-<?php
-// define variables and set to empty values
-$firstnameErr = $numberErr = $emailErr = "";
-$firstname = $lastname = $company = $number = $email = $comment = "";
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  if (empty($_POST["firstname"])) {
-  	$firstnameErr = "Name is required";
-  } else {
-  	$firstname = test_input($_POST["firstname"]);
-  }
-  
-  if (empty($_POST["lastname"])) {
-  	$lastname = "";
-  } else {
-  	$lastname = test_input($_POST["lastname"]);
-  }
-
-  if (empty($_POST["company"])) {
-  	$company = "";
-  } else {
-  	$company = test_input($_POST["company"]);
-  }
-
-  if (empty($_POST["number"])) {
-  	$numberErr = "Number is required";
-  } else {
-  	$number = test_input($_POST["number"]);
-  }
-
-  if (empty($_POST["email"])) {
-  	$emailErr = "Email is required";
-  } else {
-  	$email = test_input($_POST["email"]);
-  }
-
-  if (empty($_POST["comment"])) {
-  	$comment = "";
-  } else {
-  	$comment = test_input($_POST["comment"]);
-  }
-}
-
-function test_input($data) {
-  $data = trim($data);
-  $data = stripslashes($data);
-  $data = htmlspecialchars($data);
-  return $data;
-}
-?>
 
 <!-- SHORTCUTS ctrl and click to make several changes at once ie...
   this
@@ -230,23 +181,19 @@ function test_input($data) {
 		<p style="text-align: center;">For all enquiries regarding lettings, viewings or availability, fill out the form below.<br>
 		We aim to reply to all emails within 24 hours.
 		</p>
-		<form name="myForm" id="form" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="post">
-			<!-- action="#contact" -->
-		  <label for="name">Name <span style="color: red;"></span></label>
+		<form name="myForm" id="form" action="index.php" onsubmit="return validateForm()" method="post">
+		  <label for="name">Name <span style="color: red;">*</span></label>
 		  <input type="text" id="fname" name="firstname" placeholder="First Name">
 		  <input type="text" id="lname" name="lastname" placeholder="Last Name">
-		  <span style="color: red;"><?php echo $firstnameErr;?></span>
-
+		  
 		  <label for="company">Company</label>
 		  <input type="text" id="company" name="company">
 
 		  <label for="number">Contact Number <span style="color: red;">*</span></label>
 		  <input type="text" id="number" name="number">
-		  <span style="color: red;"><?php echo $numberErr;?></span>
 
 		  <label for="email">Email <span style="color: red;">*</span></label>
 		  <input type="text" id="email" name="email">
-		  <span style="color: red;"><?php echo $emailErr;?></span>
 		  
 		  
 		  <label for="comment">Your Message</label>
@@ -256,19 +203,8 @@ function test_input($data) {
 		</form>
 	</div>
 
-	<?php
-	echo $firstname;
-	echo "<br>";
-	echo $lastname;
-	echo "<br>";
-	echo $company;
-	echo "<br>";
-	echo $number;
-	echo "<br>";
-	echo $email;
-	echo "<br>";
-	echo $comment;
-	?>
+	<!-- <p>Welcome <?php echo $_POST["firstname"]; ?><br>
+Your email address is: <?php echo $_POST["email"]; ?></p> -->
 	
 	<footer>
 		<div class="foot-left">
