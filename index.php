@@ -37,7 +37,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (empty($_POST["firstname"])) {
   	$firstnameErr = "Name is required";
   } else {
-  	$firstname = test_input($_POST["firstname"]);
+    $firstname = test_input($_POST["firstname"]);
+    // check if name only contains letters and whitespace
+    if (!preg_match("/^[a-zA-Z ]*$/",$firstname)) {
+      $firstnameErr = "Only letters and white space allowed"; 
+    }
   }
   
   if (empty($_POST["lastname"])) {
@@ -61,7 +65,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (empty($_POST["email"])) {
   	$emailErr = "Email is required";
   } else {
-  	$email = test_input($_POST["email"]);
+    $email = test_input($_POST["email"]);
+    // check if e-mail address is well-formed
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+      $emailErr = "Invalid email format"; 
+    }
   }
 
   if (empty($_POST["comment"])) {
@@ -233,21 +241,20 @@ function test_input($data) {
 		<form name="myForm" id="form" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="post">
 			<!-- action="#contact" -->
 		  <label for="name">Name <span style="color: red;"></span></label>
+		  <span style="color: red;"><?php echo $firstnameErr;?></span>
 		  <input type="text" id="fname" name="firstname" placeholder="First Name">
 		  <input type="text" id="lname" name="lastname" placeholder="Last Name">
-		  <span style="color: red;"><?php echo $firstnameErr;?></span>
 
 		  <label for="company">Company</label>
 		  <input type="text" id="company" name="company">
 
 		  <label for="number">Contact Number <span style="color: red;">*</span></label>
-		  <input type="text" id="number" name="number">
 		  <span style="color: red;"><?php echo $numberErr;?></span>
+		  <input type="text" id="number" name="number">
 
 		  <label for="email">Email <span style="color: red;">*</span></label>
-		  <input type="text" id="email" name="email">
 		  <span style="color: red;"><?php echo $emailErr;?></span>
-		  
+		  <input type="text" id="email" name="email">
 		  
 		  <label for="comment">Your Message</label>
 		  <textarea name="comment">Don't be shy...</textarea>
