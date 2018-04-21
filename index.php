@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,6 +31,7 @@
 
 <?php
 // define variables and set to empty values
+
 $firstnameErr = $numberErr = $emailErr = "";
 $firstname = $lastname = $company = $number = $email = $comment = "";
 
@@ -77,6 +79,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   } else {
   	$comment = test_input($_POST["comment"]);
   }
+
+  	$to = "marklaffan4@gmail.com"; // this is your Email address
+    $from = $_POST['email']; // this is the sender's Email address
+    $firstname = $_POST['firstname'];
+    $lastname = $_POST['lastname'];
+    $subject = "Form submission";
+    $subject2 = "Copy of your form submission";
+    $comment = $firstname . " " . $lastname . " wrote the following:" . "\n\n" . $_POST['comment'];
+    $comment2 = "Here is a copy of your comment " . $firstname . "\n\n" . $_POST['comment'];
+
+    $headers = "From:" . $from;
+    $headers2 = "From:" . $to;
+    mail($to,$subject,$comment,$headers);
+    mail($from,$subject2,$comment2,$headers2); // sends a copy of the message to the sender
+    echo "Mail Sent. Thank you " . $firstname . ", we will contact you shortly.";
+    // You can also use header('Location: thank_you.php'); to redirect to another page.
 }
 
 function test_input($data) {
@@ -85,6 +103,8 @@ function test_input($data) {
   $data = htmlspecialchars($data);
   return $data;
 }
+
+
 ?>
 
 <!-- SHORTCUTS ctrl and click to make several changes at once ie...
